@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import SmurfsForm from "./SmurfsForm";
 
 import { SmurfContext } from "../contexts/SmurfContext";
 import "./App.css";
@@ -38,6 +39,7 @@ const App = () => {
     >
       <div className="App">
         <h1>Enter Smurf Here. Lel </h1>
+        <SmurfsForm />
       </div>
     </SmurfContext.Provider>
   );
