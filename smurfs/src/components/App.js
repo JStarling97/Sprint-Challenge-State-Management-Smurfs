@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import { SmurfContext } from "../contexts/SmurfContext";
 import "./App.css";
 
 const App = () => {
@@ -32,9 +33,13 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <h1>Enter Smurf Here. Lel </h1>
-    </div>
+    <SmurfContext.Provider
+      value={{ smurfs, setSmurfs, addSmurfs, deleteSmurf }}
+    >
+      <div className="App">
+        <h1>Enter Smurf Here. Lel </h1>
+      </div>
+    </SmurfContext.Provider>
   );
 };
 
