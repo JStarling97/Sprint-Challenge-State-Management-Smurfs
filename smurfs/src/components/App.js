@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import SmurfsForm from "./SmurfsForm";
+import SmurfsList from "./SmurfsList";
 
 import { SmurfContext } from "../contexts/SmurfContext";
 import "./App.css";
@@ -10,7 +11,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:333/smurfs")
+      .get("http://localhost:3333/smurfs")
       .then(res => {
         setSmurfs(res.data);
       })
@@ -19,7 +20,7 @@ const App = () => {
 
   const addSmurfs = smurf => {
     axios
-      .post("http://localhost:333/smurfs", smurf)
+      .post("http://localhost:3333/smurfs", smurf)
       .then(res => {})
       .catch(err => console.log(err));
   };
@@ -39,6 +40,7 @@ const App = () => {
     >
       <div className="App">
         <h1>Enter Smurf Here. Lel </h1>
+        <SmurfsList />
         <SmurfsForm />
       </div>
     </SmurfContext.Provider>
