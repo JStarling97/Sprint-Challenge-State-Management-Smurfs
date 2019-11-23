@@ -6,8 +6,11 @@ const Smurfs = props => {
     <div className="SmurfsCard">
       <h3>{props.smurf.name}</h3>
       <p>Age: {props.smurf.age}</p>
-      <p>Height: {props.smurf.height}</p>
-      <button onClick={() => props.deleteSmurf(props.smurf.id)}>
+      <p>Height ( ft ): {props.smurf.height}</p>
+      <button
+        className="deleteBtn"
+        onClick={() => props.deleteSmurf(props.smurf.id)}
+      >
         Remove Smurf
       </button>
     </div>

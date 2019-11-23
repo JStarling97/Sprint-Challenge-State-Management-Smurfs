@@ -39,9 +39,9 @@ const App = () => {
       value={{ smurfs, setSmurfs, addSmurfs, deleteSmurf }}
     >
       <div className="App">
-        <h1>Enter Smurf Here. Lel </h1>
-        <SmurfsList />
+        <h1>Assemble Your Party!</h1>
         <SmurfsForm />
+        <SmurfsList />
       </div>
     </SmurfContext.Provider>
   );

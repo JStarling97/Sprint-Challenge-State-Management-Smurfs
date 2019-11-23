@@ -20,7 +20,7 @@ const SmurfsForm = () => {
 
   return (
     <div className="SmurfForm">
-      <h2>Add a new smurf</h2>
+      <h2>Start by Adding A Custom Smurf!</h2>
       <form onSubmit={event => handleSubmit(event)}>
         <input
           type="text"
@@ -39,11 +39,11 @@ const SmurfsForm = () => {
         <input
           type="text"
           name="height"
-          placeholder="Height"
+          placeholder="Height (ft)"
           value={newSmurf.height}
           onChange={event => handleChange(event)}
         />
-        <button>Add Smurf</button>
+        <button className="addBtn">Add Smurf</button>
       </form>
     </div>
   );
