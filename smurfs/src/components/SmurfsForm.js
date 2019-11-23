@@ -25,21 +25,21 @@ const SmurfsForm = () => {
         <input
           type="text"
           name="name"
-          placeholder="name"
+          placeholder="Name"
           value={newSmurf.name}
           onChange={event => handleChange(event)}
         />
         <input
           type="number"
           name="age"
-          placeholder="age"
+          placeholder="Age"
           value={newSmurf.age}
           onChange={event => handleChange(event)}
         />
         <input
           type="text"
           name="height"
-          placeholder="height"
+          placeholder="Height"
           value={newSmurf.height}
           onChange={event => handleChange(event)}
         />
